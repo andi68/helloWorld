@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * HelloWorld Servlet.
+ * FCB Servlet.
  */
-@WebServlet(name = "testServlet", urlPatterns = { "/hello" })
-public class HelloWorld extends HttpServlet {
+@WebServlet(urlPatterns = { "/fcb" })
+public class FCBayern extends HttpServlet {
 
     private String message;
 
     @Override
     public void init() throws ServletException {
-        message = "Hello World, hello Andi";
+        message = "Hello Bayern Fan!";
     }
 
     @Override
@@ -27,6 +27,9 @@ public class HelloWorld extends HttpServlet {
         resp.setContentType("text/html");
         PrintWriter out = resp.getWriter();
         out.println("<h1>" + message + "</h1>");
+        out.println("<img src=\"static/img/fcb.jpg\" alt=\"FCB\" />");
+
+
     }
 
     //    @Override
